@@ -70,8 +70,8 @@ class NotifyHelper
   {
     await flutterLocalNotificationsPlugin.zonedSchedule(
         0,
-        'scheduled title',
-        'scheduled body',
+        title,
+        remind,
         tz.TZDateTime.now(tz.local).add(const Duration(minutes: 1)),
         const NotificationDetails(
             android: AndroidNotificationDetails(
