@@ -63,15 +63,16 @@ class NotifyHelper
     );
     await flutterLocalNotificationsPlugin.show(
         0, title, body, platformChannelSpecifics,
-        payload: 'Default_Sound');
+        payload: 'Default_Sound').then((value) => scheduledNotification(title, body),);
   }
 
-  scheduledNotification(String title, String remind)async
+  scheduledNotification(String title , String body)async
   {
+
     await flutterLocalNotificationsPlugin.zonedSchedule(
         0,
-        title,
-        remind,
+        'scheduled title',
+        'scheduled body',
         tz.TZDateTime.now(tz.local).add(const Duration(minutes: 1)),
         const NotificationDetails(
             android: AndroidNotificationDetails(

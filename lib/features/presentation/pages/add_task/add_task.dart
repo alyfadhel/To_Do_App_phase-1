@@ -344,9 +344,9 @@ class _AddTaskState extends State<AddTask> {
                         Navigator.pop(context);
                       }).then((value)
                       {
-                        NotifyHelper().scheduledNotification(
-                          AppCubit.get(context).titleController.text,
-                            AppCubit.get(context).remindController.text,
+                        NotifyHelper().displayNotification(
+                            title: AppCubit.get(context).titleController.text,
+                            body: AppCubit.get(context).remindController.text,
                         );
                       });
                     },
