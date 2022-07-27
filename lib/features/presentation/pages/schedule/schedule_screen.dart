@@ -17,36 +17,33 @@ class ScheduleScreen extends StatelessWidget {
           'Schedule',
         ),
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(5.0),
-        child: Column(
-          children:
-          [
-            Container(
-              margin: const EdgeInsets.only(top: 20.0,left: 20.0),
-              child: DatePicker(
-                DateTime.now(),
-                height: 100.0,
-                width: 50.0,
-                initialSelectedDate: DateTime.now(),
-                selectionColor: Colors.green,
-                selectedTextColor: Colors.white,
-                dateTextStyle: const TextStyle(
-                  fontSize: 20.0,
-                  fontWeight: FontWeight.w600,
-                  color: Colors.grey,
-                ),
+      body: Column(
+        children:
+        [
+          Container(
+            margin: const EdgeInsets.only(top: 20.0),
+            child: DatePicker(
+              DateTime.now(),
+              height: 100.0,
+              width: 50.0,
+              initialSelectedDate: DateTime.now(),
+              selectionColor: Colors.green,
+              selectedTextColor: Colors.white,
+              dateTextStyle: const TextStyle(
+                fontSize: 20.0,
+                fontWeight: FontWeight.w600,
+                color: Colors.grey,
               ),
             ),
-            const SizedBox(
-              height: 20.0,
-            ),
-            const TaskWidget(),
-            const SizedBox(
-              height: 20.0,
-            ),
-          ],
-        ),
+          ),
+          const SizedBox(
+            height: 20.0,
+          ),
+          const TaskWidget(),
+          const SizedBox(
+            height: 20.0,
+          ),
+        ],
       ),
     );
   }

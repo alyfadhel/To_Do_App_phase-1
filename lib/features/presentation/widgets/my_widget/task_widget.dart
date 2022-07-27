@@ -53,7 +53,7 @@ class TaskWidget extends StatelessWidget {
           ),
           const Spacer(),
           const SizedBox(
-            width: 80.0,
+            width: 50.0,
           ),
           Expanded(
             child: Text(
